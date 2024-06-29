@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:open_mart/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'OpenMart',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(useMaterial3: true).copyWith(
+        primaryColor: Colors.green,
       ),
-      home: const Scaffold(
-        body: Text('OpenMart'),
-      ),
+      home: const HomeScreen(),
     );
   }
 }
